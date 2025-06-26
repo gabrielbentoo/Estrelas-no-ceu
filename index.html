@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrelas no céu</title>
+
+    <style>
+        .square {
+
+            width: 3px;
+            height: 3px;
+            margin:5px;
+            background-color: rgb(239, 255, 14);
+            
+        }
+        body {
+            background-color: darkblue;
+            color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Estrelas geradas por loop</h1>
+    <div id="container"></div>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            const square = document.createElement("div");
+            square.classList.add("square");
+            square.style.backgroundColor = "yellow";
+            square.style.position = "absolute";
+            square.style.left = `${Math.random() *window.innerWidth}px`
+            square.style.top = `${Math.random() *window.innerHeight}px`
+            container.appendChild(square);
+        }
+
+    </script>
+    
+</body>
+</html>
